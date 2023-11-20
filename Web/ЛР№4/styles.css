@@ -1,0 +1,228 @@
+html {
+    font-size: 16px;
+    background-color: rgb(247, 247, 247);
+}
+
+nav {
+    height: 3rem;
+    text-align: center;
+}
+
+#view__checker {
+    display: none;
+}
+
+.view__switcher {
+    display: inline-block;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    cursor: pointer;
+    border: 2px solid lightgrey;
+    border-radius: 0.6rem;
+    background-color: rgb(247, 247, 247);
+}
+
+.view__switcher img {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0;
+
+}
+
+.view__switcher:hover {
+    transition: 0.2s linear;
+    background-color: lightgrey;
+    opacity: 0.6;
+}
+
+.content {
+    font: 400 1rem 'Helvetica', sans-serif;
+}
+
+#view__checker:checked+.content .good {
+    display: inline-block;
+    width: 20.7%;
+    height: 75%;
+    padding: 0.8rem;
+    margin: 1%;
+    border: 2px solid lightgrey;
+    border-radius: 0.8rem;
+    background-color: #fff;
+}
+
+#view__checker:not(:checked)+.content .good {
+    display: block;
+    width: 95%;
+    padding: 0.8rem;
+    margin: 1%;
+    border: 2px solid lightgrey;
+    border-radius: 0.8rem;
+    background-color: #fff;
+}
+
+img {
+    width: 80%;
+    margin: 0 10%;
+}
+
+.product__image {
+    transition: 0.2s linear;
+}
+
+.product__image:hover {
+    opacity: 0.7;
+}
+
+.product__image:hover+.cover .name,
+.name p:hover {
+    color: red;
+}
+
+#view__checker:not(:checked)+.content img {
+    width: 100%;
+    margin: 0;
+}
+
+#view__checker:not(:checked)+.content .product__image {
+    display: inline-block;
+    vertical-align: top;
+    width: 14%;
+    margin-left: 5%;
+}
+
+#view__checker:not(:checked)+.content .cover {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+}
+
+.name p {
+    margin: 0;
+    padding: 0;
+    transition: 0.2s linear;
+}
+
+.category {
+    margin: 0.3rem 0;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+#view__checker:not(:checked)+.content .price {
+    margin-left: 5%;
+}
+
+.price {
+    display: inline-block;
+    width: 40%;
+    height: 1.1rem;
+    text-align: center;
+}
+
+.price p {
+    font-size: 1.1rem;
+}
+
+.rating {
+    display: inline-block;
+    text-align: center;
+    width: 57%;
+    max-height: 2.1rem;
+}
+
+.rating .stars {
+    display: inline-flex;
+}
+
+.rating input {
+    position: absolute;
+    left: -9999px;
+}
+
+.rating label {
+    margin: 0;
+    cursor: pointer;
+}
+
+.rating label svg {
+    margin: 2px;
+    height: 1.9rem;
+    width: 1.9rem;
+    fill: rgb(255, 208, 88);
+    transition: fill 0.2s;
+}
+
+.rating .nuphy,
+.rating .red__square,
+.rating .lamzu,
+.rating .logitech,
+.rating .sennheiser,
+.rating .blue__yeti {
+    padding-right: 0;
+    margin-right: -1.4rem;
+    width: 1.4rem;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.rating input:checked~label svg {
+    fill: lightyellow;
+}
+
+.rating .stars:hover label svg {
+    fill: rgb(255, 220, 130);
+}
+
+.rating .stars input:hover~label svg {
+    fill: lightyellow;
+}
+
+#view__checker:not(:checked)+.content .details {
+    display: inline-block;
+    vertical-align: top;
+    width: 55%;
+}
+
+#view__checker:not(:checked)+.content .description {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+#view__checker:not(:checked)+.content .description__title {
+    text-align: center;
+}
+
+.description {
+    text-align: justify;
+}
+
+.description__title {
+    font-weight: 700;
+    margin: 0.3rem 0;
+}
+
+.description__text {
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+}
+
+@media (max-width: 1720px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1500px) {
+    html {
+        font-size: 12px;
+    }
+
+    .good {
+        width: 27%;
+    }
+}

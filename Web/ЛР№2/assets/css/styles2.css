@@ -1,0 +1,52 @@
+p {
+    text-align: center;
+    font-style: normal;
+}
+
+#third__task div.hello p.test {
+    color: blue;
+}
+
+#fourth__task p.test,
+#fourth__task .hello {
+    color: red;
+}
+
+#fifth__task p>a,
+#fifth__task a.test {
+    color: blueviolet;
+}
+
+#sixth__task #test b~i {
+    color: orange;
+}
+
+#seventh__task li {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#seventh__task li b {
+    color: mediumslateblue;
+}
+
+#eigth__task h2.header {
+    color: red;
+}
+
+#eigth__task h3.header {
+    color: blue;
+}
+
+#ninth__task #test h2~p {
+    color: green;
+}
+
+#tenth__task p * i {
+    color: brown;
+}
+
+#eleventh__task p[title*="Привет"] {
+    color: hotpink;
+}

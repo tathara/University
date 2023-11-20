@@ -1,0 +1,40 @@
+* {
+    font-family: 'Andale Mono', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+section {
+    margin: 1rem;
+}
+
+ol,
+ul {
+    padding: 0;
+}
+
+li {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 1rem;
+    margin: 0.7rem 0;
+    padding: 0.6rem;
+    transition: 0.3s linear;
+}
+
+.first__par li:hover,
+.second__par li:hover {
+    background-color: lightgreen;
+}
+
+.first__par li:hover+li+li,
+.second__par li:hover~li:not(:nth-last-of-type(1)) {
+    background-color: rgb(255, 85, 85);
+}

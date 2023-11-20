@@ -1,0 +1,314 @@
+body {
+    font-size: 16px;
+    background-color: rgba(255, 255, 225, 0.7);
+    overflow: hidden;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font: 2rem Helvetica, sans-serif;
+    color: brown;
+}
+
+main {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#first__section,
+#second__section,
+#third__section,
+#fourth__section,
+#fifth__section,
+#sixth__section {
+    position: absolute;
+    bottom: 17%;
+}
+
+#first__section {
+    left: 42%;
+}
+
+#second__section {
+    left: 45%;
+}
+
+#third__section {
+    left: 48%;
+}
+
+#fourth__section {
+    left: 51%;
+}
+
+#fifth__section {
+    left: 54%;
+}
+
+#sixth__section {
+    left: 57%;
+}
+
+#first__section:checked~.content {
+    animation: appear1 0.3s linear;
+}
+
+#second__section:checked~.content {
+    animation: appear2 0.3s linear;
+}
+
+#third__section:checked~.content {
+    animation: appear3 0.3s linear;
+}
+
+#fourth__section:checked~.content {
+    animation: appear4 0.3s linear;
+}
+
+#fifth__section:checked~.content {
+    animation: appear5 0.3s linear;
+}
+
+#sixth__section:checked~.content {
+    animation: appear6 0.3s linear;
+}
+
+#first__section:checked~#first__container img {
+    content: url(images/1.jpg);
+}
+
+#first__section:checked~#second__container img {
+    content: url(images/2.jpg);
+}
+
+#first__section:checked~#third__container img {
+    content: url(images/3.jpg);
+}
+
+#first__section:checked~#fourth__container img,
+#second__section:checked~#first__container img {
+    content: url(images/4.jpg);
+}
+
+#second__section:checked~#second__container img {
+    content: url(images/5.jpg);
+}
+
+#second__section:checked~#third__container img {
+    content: url(images/6.jpg);
+}
+
+#second__section:checked~#fourth__container img,
+#third__section:checked~#first__container img {
+    content: url(images/7.jpg);
+}
+
+#third__section:checked~#second__container img {
+    content: url(images/8.jpg);
+}
+
+#third__section:checked~#third__container img {
+    content: url(images/9.jpg);
+}
+
+#third__section:checked~#fourth__container img,
+#fourth__section:checked~#first__container img {
+    content: url(images/10.jpg);
+}
+
+#fourth__section:checked~#second__container img {
+    content: url(images/11.jpg);
+}
+
+#fourth__section:checked~#third__container img {
+    content: url(images/12.jpg);
+}
+
+#fourth__section:checked~#fourth__container img,
+#fifth__section:checked~#first__container img {
+    content: url(images/13.jpg);
+}
+
+#fifth__section:checked~#second__container img {
+    content: url(images/14.jpg);
+}
+
+#fifth__section:checked~#third__container img {
+    content: url(images/15.jpg);
+}
+
+#fifth__section:checked~#fourth__container img,
+#sixth__section:checked~#first__container img {
+    content: url(images/16.jpg);
+}
+
+#sixth__section:checked~#second__container img {
+    content: url(images/17.jpg);
+}
+
+#sixth__section:checked~#third__container img {
+    content: url(images/18.jpg);
+}
+
+#sixth__section:checked~#fourth__container img {
+    content: url(images/19.jpg);
+}
+
+.content {
+    display: inline-block;
+    position: relative;
+    width: 18%;
+    margin: 10% 2rem;
+    border: 0.12rem solid rgba(255, 255, 225, 0.7);
+    transition: all 0.2s linear;
+}
+
+input[type="checkbox"],
+label[name="cross"] {
+    display: none;
+}
+
+#zoom1:checked~#first__container label>img,
+#zoom2:checked~#second__container label>img,
+#zoom3:checked~#third__container label>img,
+#zoom4:checked~#fourth__container label>img {
+    position: fixed;
+    width: 50%;
+    height: 40rem;
+    top: -40%;
+    left: -3%;
+    z-index: 2;
+    animation: appear2 0.3s linear;
+    border: 36rem rgb(255, 255, 225) solid;
+}
+
+#zoom1:checked~#first__container label>label[name="cross"],
+#zoom2:checked~#second__container label>label[name="cross"],
+#zoom3:checked~#third__container label>label[name="cross"],
+#zoom4:checked~#fourth__container label>label[name="cross"] {
+    display: block;
+    position: fixed;
+    top: 3%;
+    left: 90%;
+    transform: rotate(45deg);
+    font: 10rem Helvetica, sans-serif;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.content img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 15rem;
+}
+
+.content:hover {
+    border-color: peachpuff;
+    border-radius: 0.5rem;
+    padding: 0;
+}
+
+.content:hover .description p {
+    visibility: visible;
+    animation: appear1 0.2s linear;
+}
+
+.description p {
+    display: block;
+    visibility: hidden;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    color: brown;
+}
+
+.modal_background {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: -1rem;
+    text-align: center;
+}
+
+footer img {
+    width: 10%;
+}
+
+@keyframes appear1 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes appear2 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes appear3 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes appear4 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes appear5 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes appear6 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

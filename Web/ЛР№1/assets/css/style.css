@@ -1,0 +1,184 @@
+html,
+body {
+    font-size: 16px;
+    background-color: #23232e;
+    height: 100%;
+    overflow: hidden
+}
+
+h1 {
+    font-size: 1.9rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.intro {
+    font-family: Andale Mono, monospace;
+    font-style: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 11rem;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../images/intro.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.intro__title {
+    color: #fff;
+    font-size: calc(2rem + 4vw);
+    font-weight: 700;
+
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+
+    width: 100%;
+    max-width: 58.75rem;
+    margin: 0 auto 12rem;
+}
+
+header {
+    font-family: Andale Mono, monospace;
+    font-style: inherit;
+    font-size: 1rem;
+    color: #fff;
+
+    width: 98%;
+    padding-top: 1rem;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__inner p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding-left: 3rem;
+}
+
+main {
+    margin: 1rem auto 0 auto;
+    max-width: 70rem;
+    min-height: 78%;
+    max-height: 100%;
+}
+
+footer {
+    font-family: Andale Mono, monospace;
+    font-style: inherit;
+    font-size: 1rem;
+    color: #fff;
+
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    text-transform: uppercase;
+}
+
+.nav__link {
+    padding-top: 0.85rem;
+
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0.8rem;
+
+    color: #fff;
+    text-decoration: none;
+
+    transition: color .2s linear;
+}
+
+.nav__link:hover {
+    color: rgb(185, 205, 226);
+}
+
+.content {
+    flex: 1;
+
+    font-family: 'Futura Book', sans-serif;
+    font-style: normal;
+    font-size: 1.05rem;
+    text-align: justify;
+
+    background: rgb(185, 205, 226);
+    border: 0.13rem solid rgb(185, 205, 226);
+    border-radius: 1.6rem;
+
+    padding: 1.9rem;
+    margin: 2rem 0;
+}
+
+.columned__content {
+    font-size: 0.7rem;
+    column-count: 2;
+    column-gap: 1rem;
+}
+
+.comments {
+    margin: 0 auto;
+    max-width: 70rem;
+}
+
+.comments__title {
+    font-family: Andale Mono, monospace;
+    font-style: inherit;
+    font-size: 3rem;
+
+    margin: 0 auto;
+}
+
+.comment__author,
+.comment__date {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__button {
+    width: 3rem;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+@media (max-width: 1600px),
+(max-height: 900px) {
+    html,
+    body,
+    main {
+        font-size: 14px;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+
+    main{
+        max-width: 80rem;
+    }
+
+    .container{
+        max-width: 80rem;
+    }
+}
